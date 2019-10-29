@@ -4,7 +4,7 @@
       = current_user.name
     .bar-contents__box__menu
       .bar-contents__box__menu--create
-        = link_to '#' do
+        = link_to new_group_path do
           %i.fa.fa-edit
       .bar-contents__box__menu--edit
         = link_to edit_user_path(current_user) do
