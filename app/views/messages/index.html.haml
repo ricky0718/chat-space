@@ -1,20 +1,5 @@
-.flash-message
-  グループを作成しました
-.side-ber
-  .ber-contents
-    .ber-contents__box
-      .ber-contents__box__text
-        箕浦教祖
-      .ber-contents__box__menu
-        .ber-contents__box__menu--create
-          = link_to '#' do
-            %i.fa.fa-edit
-        .ber-contents__box__menu--edit
-          = link_to '#' do
-            %i.fa.fa-cog
-  .ber-groups
-    .ber-groups__contents
-      = render "group"
+.side-bar
+  = render "devise/shared/side_bar"
 .main-chat 
   .chat-header 
     .chat-header__contents
