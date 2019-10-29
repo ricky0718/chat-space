@@ -10,8 +10,10 @@
         = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
 .bar-groups
-  .bar-groups__contents
-    .bar-groups__contents--name
-      箕浦教
-    .bar-groups__contents--text
-      信じるも者は皆救われる
+  - current_user.groups.each do |group|
+    .bar-groups__contents
+      = link_to '#' do
+        .bar-groups__contents--name
+          箕浦教
+        .bar-groups__contents--text
+          信じるも者は皆救われる
