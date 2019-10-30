@@ -4,9 +4,12 @@
   .chat-header 
     .chat-header__contents
       .chat-header__contents--group
-        箕浦教
-      .chat-header__contents--name
-        Member : 箕浦教祖,日比野力也
+        =@group.name
+      .chat-header__contents__name
+        .member
+          Member : 
+        .name
+          = current_user.name
     .chat-header__create
       = link_to '#',class:"create" do
         Edit

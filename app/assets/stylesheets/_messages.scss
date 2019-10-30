@@ -90,10 +90,19 @@
         font-size: 20px
       }
 
-      &--name{
+      &__name{
         color: $light-gry;
         font-size: 12px;
         padding-top: 15px;
+        display: flex;
+
+        .member{
+
+        }
+
+        .name{
+
+        }
       }
     }
     
