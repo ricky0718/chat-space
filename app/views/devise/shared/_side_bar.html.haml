@@ -4,14 +4,16 @@
       = current_user.name
     .bar-contents__box__menu
       .bar-contents__box__menu--create
-        = link_to '#' do
+        = link_to new_group_path do
           %i.fa.fa-edit
       .bar-contents__box__menu--edit
         = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
 .bar-groups
-  .bar-groups__contents
-    .bar-groups__contents--name
-      箕浦教
-    .bar-groups__contents--text
-      信じるも者は皆救われる
+  - current_user.groups.each do |group|
+    .bar-groups__contents
+      = link_to '#' do
+        .bar-groups__contents--name
+          = group.name
+        .bar-groups__contents--text
+          信じるも者は皆救われる
