@@ -126,6 +126,7 @@
     background-color: #fafafa;
     padding: 46px 40px 0;
     height: calc(100vh - 217px);
+    overflow: scroll;
     
     .messages-group{
       &__detail{
