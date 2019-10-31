@@ -1,29 +1,27 @@
-.all-contents
-  .side-bar
-    = render "devise/shared/side_bar"
-  .main-chat 
-    .chat-header 
-      .chat-header__contents
-        .chat-header__contents--group
-          箕浦教
-        .chat-header__contents--name
-          Member : 箕浦教祖,日比野力也
-      .chat-header__create
-        = link_to '#',class:"create" do
-          Edit
-    .chat-messages
-      .messages-group
-        = render "messages"
-    .chat-footer
+.side-bar
+  = render "devise/shared/side_bar"
+.main-chat 
+  .chat-header 
+    .chat-header__contents
+      .chat-header__contents--group
+        =@group.name
+      .chat-header__contents__name
+        .member
+          Member : 
+        .name
+          = current_user.name
+    .chat-header__create
+      = link_to '#',class:"create" do
+        Edit
+  .chat-messages
+    = render @messages
+  .chat-footer
+    = form_for [@group, @message],class:'new_message' do |f|
       .footer-contents
-        .footer-contents__text
-          .footer-contents__text--massage
-            type a message
-          .footer-contents__text--img
-            = form_for '#' do |f|
-              = f.label :image, class: "main-form__image" do
-                = fa_icon "image"
-                = f.file_field :image, class: "main-form__image--default"
-        .footer-contents__send
-          = link_to '#',class:"send" do
-            Send
+        = f.text_field :content, placeholder: 'type a message',class:"form__message"
+        .footer-contents__img
+          = f.label :image, class: "main-form__image" do
+            = fa_icon "image",class: 'icon'
+            = f.file_field :image, class: "main-form__image--default"
+      .footer-send     
+        = f.submit 'Send',class: 'send'
