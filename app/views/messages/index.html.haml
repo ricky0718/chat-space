@@ -11,7 +11,7 @@
         .name
           = current_user.name
     .chat-header__create
-      = link_to '#',class:"create" do
+      = link_to  edit_group_path(@group),class:"create" do
         Edit
   .chat-messages
     = render @messages
@@ -19,9 +19,9 @@
     = form_for [@group, @message],class:'new_message' do |f|
       .footer-contents
         = f.text_field :content, placeholder: 'type a message',class:"form__message"
-        .footer-contents__img
-          = f.label :image, class: "main-form__image" do
-            = fa_icon "image",class: 'icon'
-            = f.file_field :image, class: "main-form__image--default"
+      .footer-contents-img
+        = f.label :image, class: "main-form__image" do
+          = fa_icon "image",class: 'icon'
+          = f.file_field :image, class: "main-form__image--default"
       .footer-send     
         = f.submit 'Send',class: 'send'
