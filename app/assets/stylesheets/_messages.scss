@@ -96,13 +96,7 @@
         padding-top: 15px;
         display: flex;
 
-        .member{
-
-        }
-
-        .name{
-
-        }
+  
       }
     }
     
@@ -177,26 +171,26 @@
           line-height: 50px;
           padding-left: 10px;
         }
-      
+      }
 
-        &__img{
-          position: absolute;
-          right: 1px;
-          top: 1px;
-          font-size: 1.3rem;
-            
-          .main-form__image {
-            cursor: pointer;
-            i {
-              font-size: 1.3em;
-              color: black;
-            }
-            &--default {
-              display: none;
-            }
+      .footer-contents-img{
+        position: absolute;
+        right: 150px;
+        top: 20px;
+        font-size: 1.3rem;
+          
+        .main-form__image {
+          cursor: pointer;
+          i {
+            font-size: 1.3em;
+            color: black;
+          }
+          &--default {
+            display: none;
           }
         }
       }
+      
     
 
       .send{
