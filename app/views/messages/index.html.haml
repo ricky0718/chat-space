@@ -9,7 +9,8 @@
         .member
           Member : 
         .name
-          = current_user.name
+          - @group.users.each do |user|
+            = user.name
     .chat-header__create
       = link_to  edit_group_path(@group),class:"create" do
         Edit

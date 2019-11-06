@@ -39,7 +39,7 @@ $(document).on('turbolinks:load',function(){
       $('.chat-messages').append(html)
       $(".chat-messages").animate({scrollTop:$(".chat-messages")[0].scrollHeight});
       $('form')[0].reset();
-
+ 
     })
     .fail(function(){
     alert("メッセージ送信に失敗しました")
