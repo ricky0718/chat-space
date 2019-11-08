@@ -48,7 +48,6 @@ set :default_env, {
   AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
 }
 
-set :bundle_gemfile,  "server/Gemfile"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
